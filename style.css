@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(22, 22, 22);
+    padding: 4rem;
+
+}
+
+
+div.box1{
+    height: 300px;
+    width: 300px;
+    background-color:green;
+    border-radius: 12px;
+}
+div.box2{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border-radius: 12px;
+    
+}
