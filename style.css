@@ -3,24 +3,50 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
 }
 body{
     background-color: rgb(22, 22, 22);
-    padding: 4rem;
+    
 
 }
-
+ 
 
 div.box1{
     height: 300px;
     width: 300px;
-    background-color:green;
-    border-radius: 12px;
+    background-color:rgb(195, 196, 193);
+    clip-path: circle();
+    border: 10px solid rebeccapurple;
+     border-radius: 50%;
+     margin-bottom: 4rem;
 }
-div.box2{
-    height: 300px;
-    width: 300px;
-    background-color: crimson;
-    border-radius: 12px;
-    
+ 
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: crimson;
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+}  
+ul.logo li{
+  list-style: none;
+  letter-spacing: -4px;
+  font: 2em sans-serif;
+  font-weight: bold;
+} 
+ul.navlinkp {
+  width: 60%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 6;
+  justify-content: end ;
+  gap: 8rem;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+ul.navlinkp li{
+  list-style: none;
 }
