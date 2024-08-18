@@ -4,8 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Gsap practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: whitesmoke;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+
+
+        }
+
+
+        div.box1 {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(195, 196, 193);
+            clip-path: circle();
+            border: 10px solid rebeccapurple;
+            border-radius: 50%;
+            margin-bottom: 4rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: crimson;
+            padding: 0 4rem;
+            margin-bottom: 2rem;
+        }
+
+        ul.logo li {
+            list-style: none;
+            letter-spacing: -4px;
+            font: 2em sans-serif;
+            font-weight: bold;
+        }
+
+        ul.navlinkp {
+            width: 60%;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            display: flex;
+            gap: 6;
+            justify-content: end;
+            gap: 8rem;
+            align-items: center;
+            padding: 1rem 1rem;
+        }
+
+        ul.navlinkp li {
+            list-style: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,7 +87,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script>gsap.to("div.box1 ", {
+            x: 1000, duration: 2,
+            rotate: 360 * 3,
+            yoyo: true,
+            repeat: -1,
+            delay: 1,
+            scale: 0.6
+        })
+        var tl = gsap.timeline()
+
+
+        tl.from("ul.logo li", {
+            y: -30, duration: 0.6, opacity: 0
+        })
+
+        tl.from("ul.navlinkp li", {
+            y: -30, duration: 0.6, opacity: 0,
+            stagger: 0.3
+        })
+        tl.from("div.box1", {
+            y: 70
+        })</script>
 </body>
 
 </html>

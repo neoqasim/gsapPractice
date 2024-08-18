@@ -1,19 +1,21 @@
-gsap.to("div.box1 ", {
-    x: 1000, duration: 2,
-    rotate: 360 * 3,
-    yoyo: true,
-    repeat: 1,
-    delay: 1,
-    scale: 0.6
+gsap.from(".page1 .box", {
+    scale: 0, duration: 2, delay: 0.3, rotate: 360 * 2
 })
-var tl = gsap.timeline()
-
-
-tl.from("ul.logo li", {
-    y: -30, duration: 0.6, opacity: 0
+gsap.from(".page2 .box", {
+    scale: 0,
+    duration: 2,
+    delay: 0.3,
+    rotate: 360 * 2,
+    scrollTrigger: {
+        trigger: ".page2 .box",
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        end: "top 30%",
+        scrub: 2.2,
+        pin: true
+    }
 })
-
-tl.from("ul.navlinkp li", {
-    y: -30, duration: 0.6, opacity: 0,
-    stagger:0.3
+gsap.from(".page3 .box", {
+    scale: 0, duration: 2, delay: 0.3, rotate: 360 * 2
 })
